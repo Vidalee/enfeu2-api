@@ -1,0 +1,6 @@
+swappar.js
+.eslintrc.json
+/docs
+/node_modules
+/generatedoc
+apidoc.json
