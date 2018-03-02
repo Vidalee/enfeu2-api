@@ -459,13 +459,13 @@ router.post('/upload', (req, res) => {
                             upload.size = file.size;
                             upload.extension = path.extname(file.name);
                             upload.originalName = file.name;
-                            upload.id = hat(48);
+                            upload.id = hat(10);
                             upload.author = user.id;
                             upload.date = new Date().getTime();
                             upload.tags = [];
 
                             while (fs.existsSync(path.join(__dirname, '../', '/enfeu2', '/static', `/${upload.id}${upload.extension}`))) {
-                                upload.id = hat(48);
+                                upload.id = hat(10);
                             }
 
                             url = `https://${user.defaultSubdomain}.en-f.eu/${upload.id}${upload.extension}`;
